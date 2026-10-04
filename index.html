@@ -93,11 +93,19 @@
         letter-spacing: -0.025em;
       }
 
-      .contact {
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.85rem 1.25rem;
+        margin-top: clamp(1.4rem, 3vh, 2rem);
+      }
+
+      .contact,
+      .phone {
         display: inline-flex;
         align-items: center;
         gap: 0.7rem;
-        margin-top: clamp(1.4rem, 3vh, 2rem);
         padding: 0.9rem 1.25rem 0.9rem 1.4rem;
         border: 1px solid rgba(247, 244, 238, 0.88);
         border-radius: 999px;
@@ -115,12 +123,19 @@
         height: 1rem;
       }
 
-      .contact:hover {
+      .phone {
+        letter-spacing: 0.04em;
+        text-transform: none;
+      }
+
+      .contact:hover,
+      .phone:hover {
         background: var(--ink);
         color: var(--blue);
       }
 
-      .contact:focus-visible {
+      .contact:focus-visible,
+      .phone:focus-visible {
         outline: 2px solid var(--ink);
         outline-offset: 4px;
       }
@@ -147,12 +162,15 @@
       <img class="logo" src="assets/logo.png" alt="Cudmore Luxury Home Management">
       <div class="copy">
         <h1>A New Standard<br>in Luxury Home Management<br>Is Coming Soon.</h1>
-        <a class="contact" href="mailto:info@beaconpropertycare.com">
-          Contact Us
-          <svg viewBox="0 0 16 16" aria-hidden="true" fill="none">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
+        <div class="actions">
+          <a class="contact" href="mailto:info@beaconpropertycare.com">
+            Email Us
+            <svg viewBox="0 0 16 16" aria-hidden="true" fill="none">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a class="phone" href="tel:+15615810220">(561) 581-0220</a>
+        </div>
       </div>
     </section>
   </body>
